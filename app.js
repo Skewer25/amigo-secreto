@@ -29,3 +29,14 @@ function mostrarLista() {
     }
 }
 
+function sortearAmigo() {
+  // Verifica si hay al menos dos amigos en la lista antes de sortear
+    if (listaDeAmigos.length < 2) {
+        alert('Debe haber al menos dos amigos para sortear.');
+        return;
+    }
+    // Genera un índice aleatorio para seleccionar un amigo de la lista
+    let indiceAmigo = Math.floor(Math.random() * listaDeAmigos.length);
+    let amigoSorteado = listaDeAmigos[indiceAmigo];
+    document.getElementById('resultado').innerHTML = `Tu amigo secreto es: ${amigoSorteado}`;
+  }
